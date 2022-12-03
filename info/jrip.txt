@@ -1,0 +1,88 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     labeled_dataset
+Instances:    7619
+Attributes:   17
+              popularity
+              acousticness
+              danceability
+              duration_ms
+              energy
+              instrumentalness
+              key
+              liveness
+              loudness
+              speechiness
+              tempo
+              valence
+              Minor
+              3/4
+              4/4
+              5/4
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(speechiness >= 0.822) => label=2_ (255.0/3.0)
+(4/4 <= 0) and (3/4 <= 0) => label=2_ (253.0/0.0)
+(speechiness >= 0.451) and (acousticness >= 0.545) and (liveness >= 0.388) and (popularity >= 10) => label=2_ (23.0/1.0)
+(speechiness >= 0.459) and (acousticness >= 0.639) and (3/4 <= 0) and (key <= 3) => label=2_ (6.0/0.0)
+(3/4 >= 1) => label=4_ (699.0/1.0)
+(acousticness >= 0.417) and (Minor <= 0) and (valence <= 0.458) => label=3_ (871.0/22.0)
+(Minor <= 0) and (energy <= 0.514) and (key >= 4) and (acousticness >= 0.449) => label=3_ (163.0/2.0)
+(Minor <= 0) and (energy <= 0.457) and (valence <= 0.73) and (acousticness >= 0.425) and (key >= 3) => label=3_ (15.0/0.0)
+(Minor <= 0) and (acousticness >= 0.508) and (instrumentalness >= 0.169) => label=3_ (50.0/2.0)
+(acousticness >= 0.301) and (Minor <= 0) and (energy <= 0.614) and (speechiness <= 0.0435) and (valence <= 0.291) => label=3_ (34.0/7.0)
+(Minor <= 0) and (key >= 4) and (tempo <= 131.34) and (acousticness >= 0.472) => label=3_ (61.0/2.0)
+(acousticness >= 0.253) and (Minor <= 0) and (danceability <= 0.635) and (energy <= 0.388) and (tempo >= 97.005) => label=3_ (26.0/4.0)
+(acousticness >= 0.196) and (Minor <= 0) and (speechiness <= 0.0318) and (valence >= 0.31) and (energy <= 0.471) => label=3_ (28.0/5.0)
+(Minor <= 0) and (acousticness >= 0.373) and (key >= 3) and (instrumentalness <= 0.000206) and (loudness <= -6.427) and (valence <= 0.793) and (popularity <= 48) => label=3_ (17.0/0.0)
+(acousticness >= 0.239) and (Minor <= 0) and (energy <= 0.566) and (popularity >= 49) and (valence >= 0.518) and (liveness <= 0.117) and (key >= 1.5) => label=3_ (22.0/2.0)
+(Minor <= 0) and (liveness >= 0.495) and (energy <= 0.755) and (acousticness >= 0.369) => label=3_ (11.0/0.0)
+(acousticness >= 0.3) and (Minor <= 0) and (tempo <= 142.821) and (key >= 4) and (valence >= 0.596) and (liveness >= 0.211) and (liveness <= 0.504) => label=3_ (16.0/0.0)
+(Minor <= 0) and (acousticness >= 0.323) and (valence <= 0.579) and (popularity <= 10) => label=3_ (10.0/1.0)
+(acousticness >= 0.214) and (Minor <= 0) and (danceability >= 0.757) and (key >= 4.5) and (tempo >= 119.053) and (valence >= 0.672) => label=3_ (15.0/3.0)
+(Minor >= 1) => label=0_ (2193.0/1.0)
+ => label=1_ (2851.0/77.0)
+
+Number of Rules : 21
+
+
+Time taken to build model: 0.98 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7342               96.3644 %
+Incorrectly Classified Instances       277                3.6356 %
+Kappa statistic                          0.9505
+Mean absolute error                      0.0206
+Root mean squared error                  0.1127
+Relative absolute error                  7.0106 %
+Root relative squared error             29.4119 %
+Total Number of Instances             7619     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,998    0,001    0,999      0,998    0,998      0,998    0,999     0,997     0_
+                 0,957    0,028    0,953      0,957    0,955      0,928    0,985     0,955     1_
+                 0,902    0,020    0,908      0,902    0,905      0,884    0,976     0,935     3_
+                 0,993    0,000    0,996      0,993    0,994      0,994    0,999     0,993     4_
+                 0,976    0,002    0,978      0,976    0,977      0,975    0,988     0,981     2_
+Weighted Avg.    0,964    0,014    0,964      0,964    0,964      0,950    0,989     0,969     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+ 2188    0    0    0    4 |    a = 0_
+    0 2701  120    0    1 |    b = 1_
+    0  132 1232    0    2 |    c = 3_
+    0    0    0  696    5 |    d = 4_
+    3    2    5    3  525 |    e = 2_
+

@@ -1,0 +1,241 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     labeled_dataset
+Instances:    7619
+Attributes:   17
+              popularity
+              acousticness
+              danceability
+              duration_ms
+              energy
+              instrumentalness
+              key
+              liveness
+              loudness
+              speechiness
+              tempo
+              valence
+              Minor
+              3/4
+              4/4
+              5/4
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+4/4 <= 0
+|   3/4 <= 0: 2_ (305.0)
+|   3/4 > 0
+|   |   speechiness <= 0.536: 4_ (692.0/1.0)
+|   |   speechiness > 0.536
+|   |   |   acousticness <= 0.434: 4_ (4.0)
+|   |   |   acousticness > 0.434
+|   |   |   |   valence <= 0.88
+|   |   |   |   |   popularity <= 49: 2_ (102.0/1.0)
+|   |   |   |   |   popularity > 49: 4_ (3.0/1.0)
+|   |   |   |   valence > 0.88: 4_ (3.0)
+4/4 > 0
+|   Minor <= 0
+|   |   acousticness <= 0.366
+|   |   |   acousticness <= 0.195: 1_ (2169.0/12.0)
+|   |   |   acousticness > 0.195
+|   |   |   |   energy <= 0.501
+|   |   |   |   |   speechiness <= 0.66
+|   |   |   |   |   |   loudness <= -10.024
+|   |   |   |   |   |   |   speechiness <= 0.0341: 3_ (26.0/5.0)
+|   |   |   |   |   |   |   speechiness > 0.0341
+|   |   |   |   |   |   |   |   duration_ms <= 201456
+|   |   |   |   |   |   |   |   |   liveness <= 0.137
+|   |   |   |   |   |   |   |   |   |   key <= 3: 1_ (4.0)
+|   |   |   |   |   |   |   |   |   |   key > 3
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness <= 0.383
+|   |   |   |   |   |   |   |   |   |   |   |   acousticness <= 0.335: 3_ (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   acousticness > 0.335: 1_ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   instrumentalness > 0.383: 1_ (4.0)
+|   |   |   |   |   |   |   |   |   liveness > 0.137: 3_ (9.0)
+|   |   |   |   |   |   |   |   duration_ms > 201456
+|   |   |   |   |   |   |   |   |   popularity <= 55
+|   |   |   |   |   |   |   |   |   |   danceability <= 0.496
+|   |   |   |   |   |   |   |   |   |   |   acousticness <= 0.262: 1_ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   acousticness > 0.262: 3_ (2.0)
+|   |   |   |   |   |   |   |   |   |   danceability > 0.496: 1_ (17.0)
+|   |   |   |   |   |   |   |   |   popularity > 55
+|   |   |   |   |   |   |   |   |   |   energy <= 0.46: 3_ (4.0)
+|   |   |   |   |   |   |   |   |   |   energy > 0.46: 1_ (2.0)
+|   |   |   |   |   |   loudness > -10.024
+|   |   |   |   |   |   |   key <= 6.5: 1_ (62.0/11.0)
+|   |   |   |   |   |   |   key > 6.5: 3_ (5.0/1.0)
+|   |   |   |   |   speechiness > 0.66: 2_ (3.0/1.0)
+|   |   |   |   energy > 0.501
+|   |   |   |   |   key <= 3
+|   |   |   |   |   |   energy <= 0.601
+|   |   |   |   |   |   |   instrumentalness <= 0.747
+|   |   |   |   |   |   |   |   duration_ms <= 387213: 1_ (42.0/1.0)
+|   |   |   |   |   |   |   |   duration_ms > 387213: 3_ (2.0)
+|   |   |   |   |   |   |   instrumentalness > 0.747: 3_ (2.0)
+|   |   |   |   |   |   energy > 0.601: 1_ (120.0)
+|   |   |   |   |   key > 3
+|   |   |   |   |   |   popularity <= 33: 1_ (45.0/3.0)
+|   |   |   |   |   |   popularity > 33
+|   |   |   |   |   |   |   danceability <= 0.751: 1_ (137.0/19.0)
+|   |   |   |   |   |   |   danceability > 0.751
+|   |   |   |   |   |   |   |   speechiness <= 0.0834: 3_ (8.0/1.0)
+|   |   |   |   |   |   |   |   speechiness > 0.0834
+|   |   |   |   |   |   |   |   |   speechiness <= 0.222: 1_ (15.0/3.0)
+|   |   |   |   |   |   |   |   |   speechiness > 0.222
+|   |   |   |   |   |   |   |   |   |   valence <= 0.61: 1_ (4.0)
+|   |   |   |   |   |   |   |   |   |   valence > 0.61: 3_ (4.0)
+|   |   acousticness > 0.366
+|   |   |   speechiness <= 0.45
+|   |   |   |   energy <= 0.457
+|   |   |   |   |   valence <= 0.633
+|   |   |   |   |   |   acousticness <= 0.54
+|   |   |   |   |   |   |   speechiness <= 0.0533: 3_ (69.0/4.0)
+|   |   |   |   |   |   |   speechiness > 0.0533
+|   |   |   |   |   |   |   |   acousticness <= 0.432
+|   |   |   |   |   |   |   |   |   energy <= 0.247: 3_ (2.0)
+|   |   |   |   |   |   |   |   |   energy > 0.247: 1_ (7.0)
+|   |   |   |   |   |   |   |   acousticness > 0.432
+|   |   |   |   |   |   |   |   |   liveness <= 0.11
+|   |   |   |   |   |   |   |   |   |   danceability <= 0.703: 3_ (2.0)
+|   |   |   |   |   |   |   |   |   |   danceability > 0.703: 1_ (2.0)
+|   |   |   |   |   |   |   |   |   liveness > 0.11: 3_ (12.0/1.0)
+|   |   |   |   |   |   acousticness > 0.54: 3_ (794.0/3.0)
+|   |   |   |   |   valence > 0.633
+|   |   |   |   |   |   key <= 3
+|   |   |   |   |   |   |   instrumentalness <= 0.15
+|   |   |   |   |   |   |   |   valence <= 0.704
+|   |   |   |   |   |   |   |   |   popularity <= 30: 3_ (5.0)
+|   |   |   |   |   |   |   |   |   popularity > 30: 1_ (7.0/1.0)
+|   |   |   |   |   |   |   |   valence > 0.704: 1_ (26.0)
+|   |   |   |   |   |   |   instrumentalness > 0.15: 3_ (18.0)
+|   |   |   |   |   |   key > 3: 3_ (70.0/1.0)
+|   |   |   |   energy > 0.457
+|   |   |   |   |   tempo <= 163.957
+|   |   |   |   |   |   key <= 3
+|   |   |   |   |   |   |   instrumentalness <= 0.339
+|   |   |   |   |   |   |   |   valence <= 0.476
+|   |   |   |   |   |   |   |   |   speechiness <= 0.034: 3_ (20.0)
+|   |   |   |   |   |   |   |   |   speechiness > 0.034
+|   |   |   |   |   |   |   |   |   |   acousticness <= 0.602
+|   |   |   |   |   |   |   |   |   |   |   energy <= 0.586
+|   |   |   |   |   |   |   |   |   |   |   |   danceability <= 0.65: 3_ (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   danceability > 0.65: 1_ (3.0)
+|   |   |   |   |   |   |   |   |   |   |   energy > 0.586: 1_ (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   acousticness > 0.602: 3_ (10.0)
+|   |   |   |   |   |   |   |   valence > 0.476
+|   |   |   |   |   |   |   |   |   liveness <= 0.404
+|   |   |   |   |   |   |   |   |   |   key <= 2.5
+|   |   |   |   |   |   |   |   |   |   |   energy <= 0.527
+|   |   |   |   |   |   |   |   |   |   |   |   tempo <= 131.275: 1_ (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   tempo > 131.275: 3_ (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   energy > 0.527: 1_ (57.0)
+|   |   |   |   |   |   |   |   |   |   key > 2.5
+|   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0469: 1_ (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0469: 3_ (3.0)
+|   |   |   |   |   |   |   |   |   liveness > 0.404
+|   |   |   |   |   |   |   |   |   |   popularity <= 6: 1_ (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   popularity > 6: 3_ (12.0/1.0)
+|   |   |   |   |   |   |   instrumentalness > 0.339
+|   |   |   |   |   |   |   |   acousticness <= 0.46
+|   |   |   |   |   |   |   |   |   duration_ms <= 297800: 3_ (3.0)
+|   |   |   |   |   |   |   |   |   duration_ms > 297800: 1_ (2.0)
+|   |   |   |   |   |   |   |   acousticness > 0.46: 3_ (23.0)
+|   |   |   |   |   |   key > 3
+|   |   |   |   |   |   |   acousticness <= 0.485
+|   |   |   |   |   |   |   |   energy <= 0.869
+|   |   |   |   |   |   |   |   |   instrumentalness <= 0.000227
+|   |   |   |   |   |   |   |   |   |   loudness <= -6.094: 3_ (34.0/3.0)
+|   |   |   |   |   |   |   |   |   |   loudness > -6.094
+|   |   |   |   |   |   |   |   |   |   |   duration_ms <= 247693
+|   |   |   |   |   |   |   |   |   |   |   |   loudness <= -4.771: 1_ (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   loudness > -4.771
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness <= 0.0543: 1_ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   speechiness > 0.0543: 3_ (3.0)
+|   |   |   |   |   |   |   |   |   |   |   duration_ms > 247693: 3_ (4.0)
+|   |   |   |   |   |   |   |   |   instrumentalness > 0.000227
+|   |   |   |   |   |   |   |   |   |   key <= 5
+|   |   |   |   |   |   |   |   |   |   |   key <= 4.5: 1_ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   key > 4.5
+|   |   |   |   |   |   |   |   |   |   |   |   popularity <= 28: 1_ (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   popularity > 28: 3_ (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   key > 5
+|   |   |   |   |   |   |   |   |   |   |   acousticness <= 0.464: 1_ (11.0)
+|   |   |   |   |   |   |   |   |   |   |   acousticness > 0.464: 3_ (2.0)
+|   |   |   |   |   |   |   |   energy > 0.869: 1_ (6.0)
+|   |   |   |   |   |   |   acousticness > 0.485
+|   |   |   |   |   |   |   |   tempo <= 118.499: 3_ (101.0/1.0)
+|   |   |   |   |   |   |   |   tempo > 118.499
+|   |   |   |   |   |   |   |   |   loudness <= -7.994: 3_ (27.0)
+|   |   |   |   |   |   |   |   |   loudness > -7.994
+|   |   |   |   |   |   |   |   |   |   acousticness <= 0.549
+|   |   |   |   |   |   |   |   |   |   |   valence <= 0.644: 1_ (5.0)
+|   |   |   |   |   |   |   |   |   |   |   valence > 0.644: 3_ (2.0)
+|   |   |   |   |   |   |   |   |   |   acousticness > 0.549
+|   |   |   |   |   |   |   |   |   |   |   danceability <= 0.719: 3_ (12.0)
+|   |   |   |   |   |   |   |   |   |   |   danceability > 0.719
+|   |   |   |   |   |   |   |   |   |   |   |   popularity <= 53: 1_ (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   popularity > 53: 3_ (3.0)
+|   |   |   |   |   tempo > 163.957
+|   |   |   |   |   |   liveness <= 0.576
+|   |   |   |   |   |   |   popularity <= 0: 3_ (2.0)
+|   |   |   |   |   |   |   popularity > 0
+|   |   |   |   |   |   |   |   key <= 6: 1_ (42.0/1.0)
+|   |   |   |   |   |   |   |   key > 6
+|   |   |   |   |   |   |   |   |   acousticness <= 0.467: 1_ (3.0)
+|   |   |   |   |   |   |   |   |   acousticness > 0.467: 3_ (3.0)
+|   |   |   |   |   |   liveness > 0.576: 3_ (3.0)
+|   |   |   speechiness > 0.45
+|   |   |   |   acousticness <= 0.559: 1_ (3.0/1.0)
+|   |   |   |   acousticness > 0.559
+|   |   |   |   |   liveness <= 0.242
+|   |   |   |   |   |   key <= 4: 2_ (3.0)
+|   |   |   |   |   |   key > 4: 3_ (4.0)
+|   |   |   |   |   liveness > 0.242: 2_ (80.0/1.0)
+|   Minor > 0
+|   |   speechiness <= 0.609: 0_ (2193.0/2.0)
+|   |   speechiness > 0.609: 2_ (43.0/1.0)
+
+Number of Leaves  : 	87
+
+Size of the tree : 	173
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7339               96.325  %
+Incorrectly Classified Instances       280                3.675  %
+Kappa statistic                          0.9499
+Mean absolute error                      0.017 
+Root mean squared error                  0.1152
+Relative absolute error                  5.7954 %
+Root relative squared error             30.0606 %
+Total Number of Instances             7619     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,001    0,998      1,000    0,999      0,998    0,999     0,994     0_
+                 0,960    0,029    0,952      0,960    0,956      0,930    0,976     0,931     1_
+                 0,900    0,019    0,912      0,900    0,906      0,886    0,960     0,859     3_
+                 0,989    0,001    0,991      0,989    0,990      0,989    0,996     0,984     4_
+                 0,957    0,002    0,975      0,957    0,966      0,964    0,983     0,952     2_
+Weighted Avg.    0,963    0,015    0,963      0,963    0,963      0,949    0,982     0,943     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+ 2191    0    0    0    1 |    a = 0_
+    0 2710  111    0    1 |    b = 1_
+    0  133 1230    0    3 |    c = 3_
+    0    0    0  693    8 |    d = 4_
+    5    5    7    6  515 |    e = 2_
+
